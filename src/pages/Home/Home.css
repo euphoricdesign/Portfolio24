@@ -16,7 +16,7 @@
   align-items: center;
   display: flex;
   gap: 10rem;
-  height: 65rem;
+  height: 58rem;
   justify-content: center;
   position: relative;
 }
@@ -30,7 +30,7 @@
 .hero-main {
   align-items: center;
   display: flex;
-  gap: 10rem;
+  gap: 3rem;
   justify-content: center;
   position: relative;
 }
@@ -44,29 +44,69 @@
 
 .hero-text h1 {
   color: #2d2e32;
-  font-size: 5.5rem;
+  font-size: 4rem;
   line-height: 1.2;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .hero-text p {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .hero-img {
-  -webkit-animation: morph 8s ease-in-out infinite;
-  animation: morph 8s ease-in-out infinite;
-  background-image: url('../assets/foto-cv.jpg');
-  /* background-position: 50%; */
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 3px solid #2d2e32;
-  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-  height: 35rem;
-  position: relative;
-  transition: all 1s ease-in-out;
-  width: 35rem;
+  width: 270px;
+}
+
+.logos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.logos li {
+  margin-right: 10px;
+}
+
+.icon {
+  font-size: 3rem;
+}
+
+.techstack {
+  align-items: center;
+  bottom: 0;
+  color: #767676;
+  display: flex;
+  font-size: 1.7rem;
+  left: 0;
+  position: absolute;
+}
+
+.techstack p {
+  border-right: 2px solid rgba(45,46,50,.5);
+  color: #2d2e32;
+  font-family: Mulish,sans-serif;
+  font-weight: 600;
+  margin-right: 6rem;
+  padding-right: 2rem;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.techstack ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  list-style: none;
+}
+
+.logo-stack {
+  width: 30px;
+  margin-right: 10px;
 }
 
 @keyframes morph {
