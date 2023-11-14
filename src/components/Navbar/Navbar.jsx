@@ -1,4 +1,4 @@
-import './Navbar.css'
+import './Navbar.scss'
 
 const Navbar = () => {
   return (
@@ -8,11 +8,11 @@ const Navbar = () => {
       </div>
 
       <ul className='sections'>
-        <li>projects</li>
-        <li>about</li>
+        <li><button className="button-li">projects</button></li>
+        <li><button className="button-li">about</button></li>
       </ul>
 
-      <button className='available'>Available for freelance</button>
+      <button className="button">Available for freelance</button>
     </nav>
   )
 }

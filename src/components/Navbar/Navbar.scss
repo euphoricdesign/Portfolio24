@@ -1,0 +1,186 @@
+// @import "bourbon";
+
+$col-primary: #00c7ec;
+$corner-radius: 5px;
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: hsla(0,0%,100%,.8);
+  background: hsla(0,0%,100%,.88);
+  backdrop-filter: blur(12px);
+  position: fixed;
+  width: 100%;
+  padding: 22px 0;
+  z-index: 200;
+  box-shadow: 0 0 10px rgba(0,0,0,.09);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 0 40px;
+  cursor: pointer;
+}
+
+.sections {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sections li {
+  font-size: 11px;
+  text-transform: uppercase;
+  margin: 0 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sections li:hover {
+  color: #449DD1;
+  transition: all 225ms ease-in
+}
+
+@mixin transicionEaseIn {
+  transition: all 0.2s ease-in;
+}
+
+@mixin transicionEaseOut {
+  transition: all 0.2s ease-out;
+}
+
+@mixin transicionLinear {
+  transition: shine 0.5s 0s linear;
+}
+
+@mixin transicionBoxShadow {
+  transition: box-shadow 0.2s ease-in;
+}
+
+@mixin transform {
+  transform: skewX(-20deg);
+}
+
+
+.button {
+  text-decoration: none;
+  
+  color: #555454fa;
+  border: 1px solid #868686;
+  text-transform: uppercase;
+  font-size: 11px;
+  background: transparent;
+  border-radius: 30px;
+  padding: 4px 12px;
+  margin-right: 40px;
+  cursor: pointer;
+
+  box-shadow: 0 0 0 0 transparent;
+
+  @include transicionEaseIn;
+
+  &:hover {
+    color: rgb(223, 223, 223);
+    box-shadow: 0 0 30px 0 transparentize(#494848, 0.5);
+    background-color: #2d2e32;
+    border: 1px solid #2d2e32;
+
+
+    @include transicionEaseOut;
+
+    &:before {
+      @include transicionLinear;
+    }
+  }
+
+  &:active {
+    box-shadow: 0 0 0 0 transparent;
+    @include transicionBoxShadow;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+
+    opacity: 0;
+    background: white;
+    box-shadow: 0 0 15px 3px white;
+    @include transform;
+  }
+}
+
+.button-li {
+  text-decoration: none;
+  color: #555454fa;
+  border: none;
+  text-transform: uppercase;
+  font-size: 11px;
+  background: transparent;
+  border-radius: 30px;
+  padding: 4px 12px;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 transparent;
+
+  @include transicionEaseIn;
+
+  &:hover {
+    color: rgb(223, 223, 223);
+    box-shadow: 0 0 30px 0 transparentize(#494848, 0.5);
+    background-color: #2d2e32;
+
+    @include transicionEaseOut;
+
+    &:before {
+      @include transicionLinear;
+    }
+  }
+
+  &:active {
+    box-shadow: 0 0 0 0 transparent;
+    @include transicionBoxShadow;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+
+    opacity: 0;
+    background: white;
+    box-shadow: 0 0 15px 3px white;
+    @include transform;
+  }
+}
+
+@mixin shine {
+  @keyframes shine {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+}
+
