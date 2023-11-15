@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className='navbar'>
       <div>
-        <h1 className='logo'>MERLINA V.</h1>
+        <h1 className='logo'>MERLINA<span style={{color: '#3496d1', fontSize: '25px'}}>.</span></h1>
       </div>
 
       <ul className='sections'>

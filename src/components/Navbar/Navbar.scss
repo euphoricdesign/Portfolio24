@@ -14,7 +14,7 @@ $corner-radius: 5px;
   backdrop-filter: blur(12px);
   position: fixed;
   width: 100%;
-  padding: 22px 0;
+  padding: 20px 0;
   z-index: 200;
   box-shadow: 0 0 10px rgba(0,0,0,.09);
 }
@@ -86,7 +86,7 @@ $corner-radius: 5px;
 
   &:hover {
     color: rgb(223, 223, 223);
-    box-shadow: 0 0 30px 0 transparentize(#494848, 0.5);
+    // box-shadow: 0 0 30px 0 transparentize(#494848, 0.5);
     background-color: #2d2e32;
     border: 1px solid #2d2e32;
 
@@ -135,7 +135,7 @@ $corner-radius: 5px;
 
   &:hover {
     color: rgb(223, 223, 223);
-    box-shadow: 0 0 30px 0 transparentize(#494848, 0.5);
+    // box-shadow: 0 0 30px 0 transparentize(#494848, 0.5);
     background-color: #2d2e32;
 
     @include transicionEaseOut;
